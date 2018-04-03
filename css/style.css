@@ -2,6 +2,11 @@ html {
 	font-family: 'Arial';
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
@@ -9,10 +14,39 @@ h4 { font-size: 1.12em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
+.site-grid {
+	display: grid;
+	grid-template-columns: 1fr 4fr;	
+	margin: 0% 5% 0% 5%;
+}
+
+.mobile-header {
+	display: none;
+}
+
+.sidebar-logo {
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
+
+.sidebar-list-title {
+	padding-bottom: 12px;
+}
+
+.sidebar-projects-list {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.project-title, .page-title {
+	padding-bottom: 5px;
+}
+
 .projects-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 1%;
+	padding-top: 40px;
 }
 
 .project-card {
@@ -33,16 +67,40 @@ h6 { font-size: .75em; }
 	margin-bottom: 50px;
 }
 
+footer {
+	grid-column-start: 2;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
 
 @media only screen and (max-width: 768px) {
     body {
         background-color: lightblue;
     }
 
+    .mobile-header {
+    	padding-top: 30px;
+    	padding-bottom: 30px;
+    }
+
+
+    .site-grid {
+		grid-template-columns: 1fr;
+    }
+
+    .sidebar-content {
+    	display: none;
+    }
+
     .projects-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 1%;
+	}
+
+	footer {
+		grid-column-start: 1;
 	}
 }
 
