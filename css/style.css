@@ -23,13 +23,12 @@ h6 { font-size: .75em; }
 	z-index: 0;
 }
 
+.responsive-grid {
+	margin: 0% 5% 0% 5%;
+}
 
 .mobile-header {
 	display: none;
-}
-
-.responsive-grid {
-	margin: 0% 5% 0% 5%;
 }
 
 .responsive-menu {
@@ -41,7 +40,7 @@ h6 { font-size: .75em; }
 
 .responsive-grid {
 	display: grid;
-	grid-template-rows: 100px 1fr 200px;	
+	grid-template-rows: 100px 1fr 100px;	
 }
 
 .responsive-social-links a {

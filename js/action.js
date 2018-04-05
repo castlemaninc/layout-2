@@ -14,12 +14,19 @@ $( document ).ready(function() {
   	$('.bars-click-area').on('click', function(){
   		$('.responsive-menu').show();
   		$('.site-grid').hide();
-  	})
+  	});
 
   	$('.times-click-area').on('click', function(){
   		$('.responsive-menu').hide();
   		$('.site-grid').show();
   	})
+
+  	$(window).resize(function(){
+        if($( window ).width() > 753) {
+        	$('.responsive-menu').hide();
+  			$('.site-grid').show();
+        }
+    });  	
 
 	console.log('ready');
 });
