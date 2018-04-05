@@ -11,5 +11,15 @@ $( document ).ready(function() {
 	    }, 700 );
   	});
 
+  	$('.bars-click-area').on('click', function(){
+  		$('.responsive-menu').show();
+  		$('.site-grid').hide();
+  	})
+
+  	$('.times-click-area').on('click', function(){
+  		$('.responsive-menu').hide();
+  		$('.site-grid').show();
+  	})
+
 	console.log('ready');
 });

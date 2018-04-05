@@ -14,14 +14,48 @@ h4 { font-size: 1.12em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
+
 .site-grid {
 	display: grid;
 	grid-template-columns: 1fr 4fr;	
 	margin: 0% 5% 0% 5%;
+	position: relative;
+	z-index: 0;
 }
+
 
 .mobile-header {
 	display: none;
+}
+
+.responsive-grid {
+	margin: 0% 5% 0% 5%;
+}
+
+.responsive-menu {
+	display: none;	
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.responsive-grid {
+	display: grid;
+	grid-template-rows: 100px 1fr 200px;	
+}
+
+.responsive-social-links a {
+	margin: 40px;
+}
+
+.responsive-nav {	
+	text-align: center;
+	font-size: 2em;
+	padding-top: 30px;
+}
+
+.responsive-page-title, .responsive-list-title, .responsive-project-title {
+	padding: 0 0 30px;
 }
 
 .sidebar-logo {
@@ -74,21 +108,21 @@ h6 { font-size: .75em; }
 footer {
 	grid-column-start: 2;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 40px;
 	padding-bottom: 60px;
 }
 
 @media only screen and (max-width: 768px) {
     
-    .mobile-header {
+    .mobile-header, .responsive-grid header {
     	padding-top: 30px;    	
     }
 
-    .bars-click-area {
+    .bars-click-area, .times-click-area {
     	height: 50px;
     	width: 50px;    	
     }
-    
+
 
     .site-grid {
 		grid-template-columns: 1fr;
